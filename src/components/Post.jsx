@@ -1,3 +1,5 @@
+import { Avatar } from './Avatar';
+import { Comment } from './Comment';
 import styles from './Post.module.css';
 
 export function Post() {
@@ -5,13 +7,13 @@ export function Post() {
         <article className={styles.post}>
             <header>                
                 <div className={styles.author}>
-                    <img className={styles.avatar} src="https://github.com/fgom-dev.png" />
+                    <Avatar src="https://github.com/fgom-dev.png" />
                     <div className={styles.authorInfo}>
                         <strong>Fernando Gomes</strong>
                         <span>Web Developer</span>
                     </div>                    
                 </div>
-                <time>Publicado há 1h</time>
+                <time title='17 de Junho ás 18:10' dateTime='2022-06-27 18:10:34'>Publicado há 1h</time>
             </header>
 
             <div className={styles.content}>
@@ -36,6 +38,12 @@ export function Post() {
                     <button type="submit">Publicar</button>
                 </footer>
             </form>
+
+            <div className={styles.commentList}>
+                <Comment />
+                <Comment />
+                <Comment />
+            </div>
         </article>
     )
 }
