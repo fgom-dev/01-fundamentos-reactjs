@@ -5,14 +5,17 @@ import { Sidebar } from "./components/Sidebar";
 import { Post } from "./components/Post";
 
 export function App() {
-  return (
-    <>
-      <Header />
-      
-      <div className={ style.wrapper }>
-        <Sidebar />
-        <Post />
-      </div>
-    </>
+  return ( 
+    <div>
+      <Header />   
+      <div className={style.wrapper}>      
+        <Sidebar /> 
+        <main>
+          <Post />
+          <Post />
+          <Post />
+        </main>
+      </div>  
+    </div> 
   )
 }
